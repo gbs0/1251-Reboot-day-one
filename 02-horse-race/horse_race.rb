@@ -11,6 +11,8 @@
 # 1. Imprimir uma mensagem de boas vindas ao jogador
 amount = 100
 puts "Welcome to horse race"
+
+# 1.1 Definimos uma lista (estábulo) com os animais competidores
 stable = ["Mustang","Pé de pano","Lucky","Sete","Pangaré","Victor","Azarao"]
 
 # 2. Mostrar ao jogador, em quais cavalos ele pode apostar
@@ -26,7 +28,8 @@ amount = amount - 20
 # 4. Iniciarmos a corrida de cavalos!
 puts "Bang! Race started"
 
-# 5. Ao final da corrida, precisamos descobrir qual o vencedor
+# 5. Ao final da corrida, precisamos descobrir qual o vencedor, para isso,
+# sorteamos um cavalo (amostra/sample) do estábulo
 winner = stable.sample
 puts "#{winner} is the champion"
 
