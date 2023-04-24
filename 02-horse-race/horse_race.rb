@@ -8,14 +8,29 @@
 
 # Definindo o passo a passo:
 # 1. Imprimir uma mensagem de boas vindas ao jogador
-
+amount = 100
+puts "Welcome to horse race"
+stable = ["Mustang","Pé de pano","Lucky","Sete","Pangaré","Victor","Azarao"]
 # 2. Mostrar ao jogador, em quais cavalos ele pode apostar
-
+stable.each_with_index do |horse, index|
+  puts "#{index + 1} - #{horse}"
+end
 # 3. Guardamos qual foi o competidor escolhido pelo apostador
-
+puts "Choose a horse number to bet"
+choice = gets.chomp.to_i
+amount = amount - 20
 # 4. Iniciarmos a corrida de cavalos!
-
+puts "Bang! Race started"
 # 5. Ao final da corrida, precisamos descobrir qual o vencedor
-
+winner = stable.sample
+puts "#{winner} is the champion"
 # 6. Conferir se a aposta do jogador foi a ganhadora/perdedora
-
+winner_index = stable.index(winner)
+if winner_index + 1 == choice
+  puts "Its the winner"
+  amount = amount + 50
+else
+  puts "You lost"
+  amount = amount - 10
+end
+puts "£ #{amount}"
