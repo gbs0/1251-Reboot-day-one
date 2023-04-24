@@ -34,7 +34,7 @@ puts "Bang! Race started"
 winner = stable.sample
 puts "#{winner} is the champion"
 
-# 6. Conferir se a aposta do jogador foi a ganhadora/perdedora
+# 6. Confere se a aposta do jogador foi a ganhadora/perdedora
 winner_index = stable.index(winner)
 
 if winner_index + 1 == choice
