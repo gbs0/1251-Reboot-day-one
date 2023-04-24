@@ -20,7 +20,8 @@ stable.each_with_index do |horse, index|
   puts "#{index + 1} - #{horse}"
 end
 
-# 3. Guardamos qual foi o competidor escolhido pelo apostador e cobramos $20 pela aposta (amount -= 20)
+# 3. Guardamos qual foi o competidor escolhido pelo apostador e cobramos $20 pela aposta
+# reduzindo assim, seu saldo inicial (amount -= 20)
 puts "Choose a horse number to bet"
 choice = gets.chomp.to_i
 amount = amount - 20
@@ -28,8 +29,8 @@ amount = amount - 20
 # 4. Iniciarmos a corrida de cavalos!
 puts "Bang! Race started"
 
-# 5. Ao final da corrida, precisamos descobrir qual o vencedor, para isso,
-# sorteamos um cavalo (amostra/sample) do estábulo
+# 5. Ao final da corrida, precisamos descobrir qual o vencedor,
+# então, sorteamos um cavalo (amostra/sample) a partir do estábulo.
 winner = stable.sample
 puts "#{winner} is the champion"
 
