@@ -44,4 +44,6 @@ else
   puts "You lost"
   amount = amount - 10
 end
+
+# Mostra o saldo final após a corrida
 puts "£ #{amount}"
